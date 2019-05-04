@@ -1,0 +1,19 @@
+.container.py-3
+    %h2 Regist School
+    %hr/
+    = form_for @school do |f|
+        .form-group
+            = f.label :name, "school name"
+            = f.text_field :name, {class:"form-control"}
+        = f.fields_for :students do |st|
+            = st.hidden_field :id, {}
+            .form-group
+                = st.label :name, "student name"
+                = st.text_field :name, {class:"form-control"}
+        = f.submit "regist", {class:"btn btn-primary"}
+        = link_to "back to prev page", root_path, {class:"btn btn-default"}
+
+            
+                
+              
+      

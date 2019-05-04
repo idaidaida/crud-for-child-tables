@@ -1,0 +1,18 @@
+.container.py-3
+    %h2 School List
+    %hr/
+    .row
+        .col-3.pt-2
+            .list-group
+                .list-group-item
+                    = link_to "add school", new_school_path
+        .col-9
+            - @schools.each do |school|
+                %h3 #{school.name}
+                .list-group
+                    - school.students.each do |student|
+                        .list-group-item
+                            #{student.name}
+                .py-2.pb-4
+                    = link_to "Edit", edit_school_path(school),{class:"btn btn-primary"}
+                    = link_to "Delete", school_path(school),{class:"btn btn-danger",method: :delete}
