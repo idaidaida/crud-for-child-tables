@@ -1,24 +1,11 @@
-# README
+# 概要
+複数の小テーブルを持つ親テーブルがあるときに、親テーブルと小テーブルを同時に操作するサンプルコードを書いた。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 前提
+## テーブル構成
+### 学校テーブル(親テーブル)
+- 学校名(string)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 生徒テーブル(小テーブル)
+- 氏名(string)
+- 所属学校(外部キー)
